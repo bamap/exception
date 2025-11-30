@@ -9,8 +9,8 @@
 
     <packaging>jar</packaging>
 
-    <name>Exception</name>
-    <description>This project, Define project exceptions</description>
+    <name>Blu Exceptions</name>
+    <description>Standardized custom exceptions for Spring Boot apps with structured data for logging/i18n.</description>
 
     <developers>
         <developer>
@@ -35,6 +35,7 @@
     </licenses>
 
     <url>https://bamap.ir</url>
+    <inceptionYear>2025</inceptionYear>
     <properties>
         <java.version>17</java.version>
         <kotlin.version>1.9.25</kotlin.version>
