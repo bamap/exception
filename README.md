@@ -65,26 +65,7 @@ class UserService(private val userRepo: UserRepository) {
 
 ## Integration
 
-### spring-exception-handling
-Global handling via `@ControllerAdvice`:
-
-```kotlin
-@ControllerAdvice
-class BluExceptionHandler {
-    @ExceptionHandler(NotFoundException::class)
-    fun handle(ex: NotFoundException): ResponseEntity<ErrorResponse> {
-        // Structured JSON: status, message, classType, identifier, args
-        return ResponseEntity.status(404).body(ErrorResponse.from(ex))
-    }
-}
-```
-
-### spring-common-log
-Auto-logs with context (placeId, args) via SLF4J/MDC:
-
-```kotlin
-logger.error("Validation failed", BluIllegalArgumentException(args = mapOf("input" to data)))
-```
+Compatible with `spring-common-log` and `spring-exception-handling`.
 
 ### i18n Messages
 `messages.properties`:
