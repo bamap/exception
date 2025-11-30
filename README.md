@@ -8,7 +8,6 @@ Key features:
 - Serializable where needed (e.g., `AccessDeniedException`, `NotFoundException`).
 - Consistent constructors with optional `args: Map<String, Any?>` for templating.
 - Extend `RuntimeException` (unchecked exceptions).
-- Designed for `spring-common-log` (MDC-structured logging) and `spring-exception-handling` (@ControllerAdvice).
 
 ## Installation
 
@@ -63,9 +62,9 @@ class UserService(private val userRepo: UserRepository) {
 }
 ```
 
-## Integration
+## Roadmap
 
-Compatible with `spring-common-log` and `spring-exception-handling`.
+Our roadmap is to implement other useful libraries named `spring-common-log` and `spring-exception-handling` to implement some common useful features for Spring Boot applications.
 
 ### i18n Messages
 `messages.properties`:
