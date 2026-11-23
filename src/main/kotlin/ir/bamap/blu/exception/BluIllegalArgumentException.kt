@@ -1,7 +1,8 @@
 package ir.bamap.blu.exception
 
 class BluIllegalArgumentException(
-    message: String = "{blu.illegalArgument}",
+    title: String ="{blu.illegalArgument.title}",
+    message: String = "{blu.illegalArgument.message}",
     args: Map<String, Any?> = emptyMap(),
-): BluException(400, message, args) {
+): BluException(400, title, message, args) {
 }

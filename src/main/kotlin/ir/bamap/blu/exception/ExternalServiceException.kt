@@ -4,4 +4,8 @@ open class ExternalServiceException(
     open val serviceName: String,
     statusCode: Int,
     open val response: Map<String, Any?>
-) : BluException(statusCode, "{blu.externalServiceError}", mapOf("serviceName" to serviceName, "response" to response))
+) : BluException(
+    statusCode,
+    "{blu.externalServiceError.title}", "{blu.externalServiceError.message}",
+    mapOf("serviceName" to serviceName, "response" to response)
+)

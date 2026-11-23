@@ -2,6 +2,7 @@ package ir.bamap.blu.exception
 
 open class NeverOccurException(
     placeId: String,
-    message: String = "{blu.neverOccur}",
+    title: String = "{blu.neverOccur.title}",
+    message: String = "{blu.neverOccur.message}",
     args: Map<String, Any?> = emptyMap(),
-) : LogicalException(placeId, message, args)
+) : LogicalException(placeId, title, message, args)

@@ -2,6 +2,7 @@ package ir.bamap.blu.exception
 
 open class NullException(
     property: String,
-    message: String = "{blu.null}",
+    title: String = "{blu.null.title}",
+    message: String = "{blu.null.message}",
     args: Map<String, Any?> = emptyMap()
-) : EmptyException(property, message, args)
+) : EmptyException(property, title, message, args)

@@ -2,6 +2,7 @@ package ir.bamap.blu.exception
 
 open class NotImplementedException(
     val placeId: String,
-    message: String = "{blu.notImplemented}",
+    title: String = "{blu.notImplemented.title}",
+    message: String = "{blu.notImplemented.message}",
     args: Map<String, Any?> = emptyMap(),
-) : BluException(500, message, mapOf("placeId" to placeId, *args.entries.map { it.toPair() }.toTypedArray()))
+) : BluException(500, title, message, mapOf("placeId" to placeId, *args.entries.map { it.toPair() }.toTypedArray()))
